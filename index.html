@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chợ Rau Củ - Thanh Toán</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul>
+           
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section class="products">
+     
+
+        <!-- Danh sách 10 sản phẩm -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37" alt="Cà rốt">
+            <h3>Cà rốt</h3>
+            <p>Giá: 20.000đ/kg</p>
+            <button class="add-to-cart" data-name="Cà rốt" data-price="20000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://product.hstatic.net/200000423303/product/cai-bo-xoi-huu-co_dcef0c0e1fc1491599583cc06a19b830_1024x1024.jpg" alt="Cải bó xôi">
+            <h3>Cải bó xôi</h3>
+            <p>Giá: 25.000đ/kg</p>
+            <button class="add-to-cart" data-name="Cải bó xôi" data-price="25000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655" alt="Khoai tây">
+            <h3>Khoai tây</h3>
+            <p>Giá: 18.000đ/kg</p>
+            <button class="add-to-cart" data-name="Khoai tây" data-price="18000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://www.favri.org.vn/images/anh_tinkhoahoc/Ca_chua.jpg" alt="Cà chua">
+            <h3>Cà chua</h3>
+            <p>Giá: 22.000đ/kg</p>
+            <button class="add-to-cart" data-name="Cà chua" data-price="22000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://product.hstatic.net/1000309753/product/dua-hau-3_2463a57a99704267a7f7ad7c5400c81d_6688e26f939b41df85b72f437268f537_master.jpg" alt="Dưa hấu">
+            <h3>Dưa hấu</h3>
+            <p>Giá: 12.000đ/kg</p>
+            <button class="add-to-cart" data-name="Dưa hấu" data-price="12000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://cayantraidetrong.com/wp-content/uploads/2021/07/cay-bi-do-5.jpg" alt="Bí đỏ">
+            <h3>Bí đỏ</h3>
+            <p>Giá: 30.000đ/kg</p>
+            <button class="add-to-cart" data-name="Bí đỏ" data-price="30000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://product.hstatic.net/200000240163/product/suhao_84d70961abf742af9c51d24fdc52b952_master.jpg" alt="Su su">
+            <h3>Su su</h3>
+            <p>Giá: 15.000đ/kg</p>
+            <button class="add-to-cart" data-name="Su su" data-price="15000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src="https://login.medlatec.vn//ImagePath/images/20221112/20221112_hanh-tay-1.jpg" alt="Hành tây">
+            <h3>Hành tây</h3>
+            <p>Giá: 10.000đ/kg</p>
+            <button class="add-to-cart" data-name="Hành tây" data-price="10000">Thêm vào giỏ hàng</button>
+        </div>
+
+        <div class="product">
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5zdspsp7VgNqUlHYGNsq9fdyFNVDsRDOBA&s" alt="Bắp cải">
+            <h3>Bắp cải</h3>
+            <p>Giá: 14.000đ/kg</p>
+            <button class="add-to-cart" data-name="Bắp cải" data-price="14000">Thêm vào giỏ hàng</button>
+        </div>
+    </section>
+
+    <!-- Giỏ hàng -->
+    <section id="cart-detail" class="section">
+        <h2>Giỏ hàng</h2>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    <th>Tổng</th>
+                    <th>Hủy Giỏ Hàng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Các sản phẩm trong giỏ sẽ hiển thị ở đây -->
+            </tbody>
+        </table>
+        <p id="cart-empty-message" style="display: none;">Giỏ hàng của bạn hiện tại trống.</p>
+        <button id="checkout" style="display: none;">Thanh toán</button>
+    </section>
+
+    <!-- Phần thanh toán -->
+    <section id="payment" class="section" style="display: none;">
+        <h2>Thanh toán</h2>
+        <form id="payment-form">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="address">Địa chỉ giao hàng:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="payment-method">Phương thức thanh toán:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                <option value="online">Thanh toán trực tuyến</option>
+            </select><br><br>
+
+            <button type="submit">Xác nhận thanh toán</button>
+        </form>
+
+        <div id="payment-result" style="display: none;">
+            <h3>Cảm ơn bạn đã thanh toán!</h3>
+            <p>Đơn hàng của bạn đang được xử lý.</p>
+        </div>
+    </section>
+
+    <section id="gioi-thieu" class="section">
+        <h2>Giới thiệu</h2>
+        <p>Tổ chúng em chuyên cung cấp các loại rau củ tươi ngon, an toàn cho sức khỏe. Hãy trải nghiệm dịch vụ của nhóm chúng emmmmmm!</p>
+    </section>
+
+    <footer>
+    <section id="lien-he" class="section">
+        <h2>Liên hệ</h2>
+        <p>Địa chỉ:Bến Chợ Bà cũ</p>
+        <p>Số điện thoại: 0783753795</p>
+        <p>Email:Phancongdat23112007@gmail.com</p>
+    </section>
+
+        
+       
+
+        <p>&copy;  Chợ Rau Củ Tươi Mại dô Mại dô.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

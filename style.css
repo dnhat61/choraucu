@@ -1,0 +1,165 @@
+/* Tổng thể trang web */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #d7f5d1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #319f09;
+    color: #fff;
+    padding:200px ;
+    text-align: center;
+    text-align:bottom;
+    font-style: normal;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background: #e6c4ad;
+    border: 1px solid #de2323;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product button {
+    background-color: #16bb47;
+    color: rgb(181, 31, 31);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #139927;
+}
+
+/* Giỏ hàng */
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-table th, #cart-table td {
+    border: 1px solid #36d340;
+    padding: 8px;
+    text-align: center;
+}
+
+#cart-table th {
+    background-color: #e1dbdb;
+}
+
+#checkout {
+    background-color: #d51919;
+    color: rgb(210, 15, 15);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout:hover {
+    background-color: #3acd3a;
+}
+
+/* Phần thanh toán */
+#payment {
+    background-color: #da2a2a;
+    padding: 20px;
+    border: 1px solid #950c0c;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#payment form {
+    display: flex;
+    flex-direction: column;
+}
+
+#payment form input,
+#payment form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #87e32b;
+    border-radius: 5px;
+}
+
+#payment form button {
+    padding: 10px;
+    background-color: #26d338;
+    color: rgb(202, 20, 20);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#payment form button:hover {
+    background-color: #24cf24;
+}
+
+/* Kết quả thanh toán */
+#payment-result {
+    text-align: center;
+    margin-top: 20px;
+}
+footer{
+    background-color: #2ff152;
+    color: rgb(188, 16, 16);
+    font-size: 20px;
+    
+}
+header{
+    background-image: url("f635054d-b8cd-43b3-a34e-7ac1c0f0dbda.jpg");
+    background-size: cover;               
+    background-position: center center;   
+    background-repeat: no-repeat;        
+    height: 10vh;                       
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;                  
+    justify-content: center;                      
+}
+
+
+
